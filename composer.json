@@ -1,0 +1,51 @@
+{
+    "name": "processdrive/translation-drive",
+    "description": "This library is help for javascript locales file convert to the Excel sheet. Then Excel sheet convert to the javascript locales file.",
+    "type": "library",
+    "keywords": ["translation"],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Kaviyarasan Shanmugam",
+            "email": "kaviyarasanshanmugam1999@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Venkatesan C",
+            "email": "venkatesangee@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7",
+        "illuminate/contracts": "^8.0",
+        "phpoffice/phpexcel": ">=1.8",
+        "phpoffice/phpspreadsheet": ">=1.12",
+        "shuchkin/simplexlsx": "^0.8.24"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ProcessDrive\\TranslationDrive\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ProcessDrive\\TranslationDrive\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ProcessDrive\\TranslationDrive\\Providers\\TranslationSheetServiceProvider"
+            ]
+        }
+    }
+}
