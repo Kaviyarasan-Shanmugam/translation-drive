@@ -21,7 +21,7 @@
         "php": ">=7",
         "phpoffice/phpexcel": ">=1.8",
         "phpoffice/phpspreadsheet": ">=1.12",
-        "shuchkin/simplexlsx": ">=0.8.24"
+        "shuchkin/simplexlsx": "^1.0.14"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0"
