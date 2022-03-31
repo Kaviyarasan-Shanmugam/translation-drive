@@ -59,11 +59,13 @@ DIRECTORY       = "resources"
 JS_PROJECT_PATH = "checklist"
 FIND_DIRECTORY  = "language,languages"
 ```
+```
 JS_LOCALES    = Set your locales files
 JS_KEY_STRING = Key values render in JS File
 DIRECTORY     = Mail folder name 
 JS_PROJECT_PATH = JS project file
 FIND_DIRECTORY = Read Language folders
+```
 
 ```
 'resources' => {
