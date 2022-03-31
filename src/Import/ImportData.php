@@ -31,7 +31,7 @@ trait ImportData
     {
         $full_path          =   $directory.'/'.$project_directory;
         $read_excel_data    =   array();
-        if ($xlsx = \SimpleXLSX::parse($full_path.'/'.$project_directory.'translationFile.Xlsx')) {
+        if ($xlsx = \Shuchkin\SimpleXLSX::parse($full_path.'/'.$project_directory.'translationFile.Xlsx')) {
             foreach ($xlsx->rows() as $r) {
                 $read_excel_data[] = $r;
             }
