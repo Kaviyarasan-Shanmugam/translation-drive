@@ -25,28 +25,25 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 
 
+run
+
+```
+composer require process-drive/translation-drive
+```
+
 Either run
-
-
 
 ```
 composer require process-drive/translation-drive:v1.0.0
 ```
 
-
-
 or run
-
-
 
 ```
 composer require process-drive/translation-drive:"Set your version"
 ```
 
-
 to the require section of your `composer.json` file.
-
-
 
 
 .env
