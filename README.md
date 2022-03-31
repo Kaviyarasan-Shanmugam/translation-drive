@@ -78,6 +78,9 @@ FIND_DIRECTORY = Read Language folders
     }
 }
 ```
+After Instalization
+===================
+First Export your JS file and then work on it.
 
 License
 =======
