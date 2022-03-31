@@ -7,11 +7,11 @@ ProcessDrive JS Translation Converter
 
 
 
-[![Latest Stable Version](https://poser.pugx.org/Kaviyarasan-Shanmugam/translation-drive/v/stable)](https://packagist.org/packages/Kaviyarasan-Shanmugam/translation-drive)
-[![License](https://poser.pugx.org/Kaviyarasan-Shanmugam/translation-drive/license)](https://packagist.org/packages/Kaviyarasan-Shanmugam/translation-drive)
-[![Total Downloads](https://poser.pugx.org/Kaviyarasan-Shanmugam/translation-drive/downloads)](https://packagist.org/packages/Kaviyarasan-Shanmugam/translation-drive)
-[![Monthly Downloads](https://poser.pugx.org/Kaviyarasan-Shanmugam/translation-drive/d/monthly)](https://packagist.org/packages/Kaviyarasan-Shanmugam/translation-drive)
-[![Daily Downloads](https://poser.pugx.org/Kaviyarasan-Shanmugam/translation-drive/d/daily)](https://packagist.org/packages/Kaviyarasan-Shanmugam/translation-drive)
+[![Latest Stable Version](https://poser.pugx.org/process-drive/translation-drive/v/stable)](https://packagist.org/packages/process-drive/translation-drive)
+[![License](https://poser.pugx.org/process-drive/translation-drive/license)](https://packagist.org/packages/process-drive/translation-drive)
+[![Total Downloads](https://poser.pugx.org/process-drive/translation-drive/downloads)](https://packagist.org/packages/process-drive/translation-drive)
+[![Monthly Downloads](https://poser.pugx.org/process-drive/translation-drive/d/monthly)](https://packagist.org/packages/process-drive/translation-drive)
+[![Daily Downloads](https://poser.pugx.org/process-drive/translation-drive/d/daily)](https://packagist.org/packages/process-drive/translation-drive)
 
 
 
