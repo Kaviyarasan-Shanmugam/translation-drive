@@ -4,7 +4,7 @@ namespace ProcessDrive\TranslationDrive\Helper;
 class Message
 {
 
-    public function key($key)
+    static function key($key)
     {
         $message = array(
             'env_required' => 'Please Check The ENV Configurations..!',
