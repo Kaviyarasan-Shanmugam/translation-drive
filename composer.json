@@ -1,5 +1,5 @@
 {
-    "name": "process_drive/translation-drive",
+    "name": "process-drive/translation-drive",
     "description": "This library is help for javascript locales file convert to the Excel sheet. Then Excel sheet convert to the javascript locales file.",
     "type": "library",
     "keywords": ["translation"],
