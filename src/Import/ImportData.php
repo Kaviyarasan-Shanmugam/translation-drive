@@ -1,4 +1,5 @@
 <?php
+
 namespace ProcessDrive\TranslationDrive\Import;
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -6,8 +7,7 @@ use ProcessDrive\TranslationDrive\Helper\Message;
 
 trait ImportData
 {
-
-    public function convertExcelToJS ($env_data)
+    public function convertExcelToJS($env_data)
     {
         $get_excel_data     =   $this->scanExcelSheet($env_data['env_directory'], $env_data['env_project_directory']);
         if (is_array($get_excel_data)) {
@@ -27,7 +27,7 @@ trait ImportData
     /**
      * Scan the excel file and convert to PHP Array
      */
-    public function scanExcelSheet ($directory, $project_directory)
+    public function scanExcelSheet($directory, $project_directory)
     {
         $full_path          =   $directory.'/'.$project_directory;
         $read_excel_data    =   array();
@@ -39,13 +39,12 @@ trait ImportData
         } else {
             $this->info(Message::key('file_not_found'));
         }
-
     }
 
     /**
      * Change the indexed array to associative array based on excel header
      */
-    public function indexedToAssociative ($get_excel_data, $excel_header)
+    public function indexedToAssociative($get_excel_data, $excel_header)
     {
         foreach ($get_excel_data as $value) {
             $read_excel  = array();
@@ -60,26 +59,28 @@ trait ImportData
     /**
      * Make result
      */
-    public function groupByResult ($group_by_path, $locales) {
+    public function groupByResult($group_by_path, $locales)
+    {
         $groupByResult     =   array();
         foreach ($group_by_path as $path => $allLocaleFileData) {
             foreach ($allLocaleFileData as $singleArray) {
                 foreach ($locales as $localeName) {
                     $explodeKey     = explode('.', $singleArray['KEY']);
                     $explodeKey[0]  = $explodeKey[0] == 'locale' ? $localeName : $explodeKey[0];
-                    array_unshift($explodeKey,$localeName);
-                    array_unshift($explodeKey,$path);
+                    array_unshift($explodeKey, $localeName);
+                    array_unshift($explodeKey, $path);
                     $this->assignArrayByPath($groupByResult, implode('.', $explodeKey), $singleArray[$localeName]);
                 }
             }
         }
-        return $groupByResult;   
+        return $groupByResult;
     }
 
     /**
      * Split key and make array
      */
-    public function assignArrayByPath(&$resultData, $path, $value, $separator='.') {
+    public function assignArrayByPath(&$resultData, $path, $value, $separator='.')
+    {
         $keys = explode($separator, $path);
         foreach ($keys as $key) {
             $resultData = &$resultData[$key];
@@ -90,11 +91,12 @@ trait ImportData
     /**
      * Write JS File Content
      */
-    public function createContent ($groupByResult, $keyType) {
+    public function createContent($groupByResult, $keyType)
+    {
         $completeContent   = array();
         foreach ($groupByResult as $getPath => $languageData) {
             foreach ($languageData as $fileLocaleName => $contentData) {
-                foreach ($contentData as $moduleNameValue => $moduleData) { 
+                foreach ($contentData as $moduleNameValue => $moduleData) {
                     $content = $keyType ? "export const {$moduleNameValue} = {" : "const {$moduleNameValue} = {";
                     $this->writeContent($moduleData, "\n\t", $keyType, $content);
                     if ($keyType) {
@@ -104,7 +106,7 @@ trait ImportData
                         $content .= "\nexport default {$moduleNameValue};";
                     }
                     $completeContent[$getPath.$fileLocaleName.'.js'] = $content;
-                } 
+                }
             }
         }
         return $completeContent;
@@ -113,7 +115,8 @@ trait ImportData
     /**
      * Write the JS File As like JS Format
      */
-    public function writeContent ($moduleData, $newline, $keyType, &$content) {
+    public function writeContent($moduleData, $newline, $keyType, &$content)
+    {
         $i = 1;
         $commaCount = count($moduleData);
         foreach ($moduleData as $key => $value) {
@@ -134,9 +137,10 @@ trait ImportData
     }
 
     /**
-     * Make JS file 
+     * Make JS file
      */
-    public function writeTranslationInJs($path, $content) {
+    public function writeTranslationInJs($path, $content)
+    {
         // Replace locale js file
         $folder = explode('/', $path);
         array_pop($folder);
