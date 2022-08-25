@@ -1,10 +1,10 @@
 <?php
+
 namespace ProcessDrive\TranslationDrive\Helper;
 
 class Message
 {
-
-    static function key($key)
+    public static function key($key)
     {
         $message = array(
             'env_required' => 'Please Check The ENV Configurations..!',
@@ -15,9 +15,7 @@ class Message
             'export_success' => 'JS File To Excel Sheet Converted Successfully..!',
             'file_download_issue' => 'File download issue'
         );
-        
+
         return @$message[$key] ? $message[$key] : null;
     }
-
-    
 }

@@ -7,7 +7,6 @@ use ProcessDrive\TranslationDrive\Helper\Message;
 use ProcessDrive\TranslationDrive\Export\ExportData;
 use Illuminate\Console\Command;
 
-
 class JSToExcel extends Command
 {
     use Validation, ExportData;
@@ -18,8 +17,8 @@ class JSToExcel extends Command
 
     public function handle()
     {
-       $get_env_data   =   $this->validateENVData();
-        
+        $get_env_data   =   $this->validateENVData();
+
         if ($get_env_data) {
             $this->convertJSToExcel($get_env_data);
         }
