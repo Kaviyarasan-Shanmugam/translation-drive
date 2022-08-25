@@ -15,5 +15,4 @@ class TranslationSheetServiceProvider extends ServiceProvider
             JSToExcel::class
         ]);
     }
-
 }
