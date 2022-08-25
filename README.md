@@ -25,28 +25,25 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 
 
+run
+
+```
+composer require process-drive/translation-drive
+```
+
 Either run
-
-
 
 ```
 composer require process-drive/translation-drive:v1.0.0
 ```
 
-
-
 or run
-
-
 
 ```
 composer require process-drive/translation-drive:"Set your version"
 ```
 
-
 to the require section of your `composer.json` file.
-
-
 
 
 .env
@@ -60,11 +57,11 @@ JS_PROJECT_PATH = "checklist"
 FIND_DIRECTORY  = "language,languages"
 ```
 ```
-JS_LOCALES    = Set your locales files
-JS_KEY_STRING = Key values render in JS File
-DIRECTORY     = Mail folder name 
-JS_PROJECT_PATH = JS project file
-FIND_DIRECTORY = Read Language folders
+JS_LOCALES      = Set your locales files
+JS_KEY_STRING   = Key values render in JS File
+DIRECTORY       = folder name (resources or public) 
+JS_PROJECT_PATH = JS project file (vuejs project file) 
+FIND_DIRECTORY  = Read Language folders (inside project file locale directory)
 ```
 
 ```
@@ -81,6 +78,9 @@ FIND_DIRECTORY = Read Language folders
     }
 }
 ```
+After Instalization
+===================
+First Export your JS file and then work on it.
 
 License
 =======

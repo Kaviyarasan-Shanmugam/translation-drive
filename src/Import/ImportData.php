@@ -140,8 +140,8 @@ trait ImportData
         // Replace locale js file
         $folder = explode('/', $path);
         array_pop($folder);
-        $folder = "./".env('DIRECTORY')."/".implode('/', $folder);
-        $file = "./".env('DIRECTORY')."/".$path;
+        $folder = "./".implode('/', $folder);
+        $file = "./".$path;
         // make directory
         $folders = explode("/", $folder);
         $fpath   = "";

@@ -16,7 +16,7 @@ class PackageTest extends TestCase
     
     /** @test */
     public function it_has_reload_cache_command()
-    {
+    { 
         $this->assertTrue(class_exists(ExcelToJS::class));
         $this->assertTrue(class_exists(JSToExcel::class));
     }
